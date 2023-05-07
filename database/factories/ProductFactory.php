@@ -21,7 +21,7 @@ class ProductFactory extends Factory
             'detail' => $this->faker->sentence($nbWords = 10, $variableNbWords = true),
             'price' => $this->faker->numberBetween(120,1200),
             'stock' => $this->faker->numberBetween(1,100),
-            'discount' => $this->faker->numberBetween(10,100),
+            'discount' => $this->faker->numberBetween(5,35),
         ];
     }
 }
