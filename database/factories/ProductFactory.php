@@ -17,7 +17,11 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->sentence($nbWords = 3, $variableNbWords = true),
+            'detail' => $this->faker->sentence($nbWords = 10, $variableNbWords = true),
+            'price' => $this->faker->numberBetween(120,1200),
+            'stock' => $this->faker->numberBetween(1,100),
+            'discount' => $this->faker->numberBetween(10,100),
         ];
     }
 }
