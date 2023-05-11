@@ -17,13 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $product = ProductResource::collection(Product::latest()->get());
-        if($product->count() > 0){
-            return response()->json([
-                'status'=>200,
-                'products'=>$product
-            ],200);
-        }
+        return new ProductCollection(Product::all());
     }
 
     /**
